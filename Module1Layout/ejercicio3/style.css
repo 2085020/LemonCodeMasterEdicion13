@@ -1,13 +1,15 @@
+.container {
+    display: flex;
+}
+
 @media screen and (min-width: 431px) {
     .container {
-        display: flex;
         flex-direction: row;
     }
 }
 
 @media screen and (max-width: 430px) {
     .container {
-        display: flex;
         flex-direction: column;
 
     }
@@ -15,7 +17,7 @@
 
 
 .container>.menuentry {
-    background-color: aqua;
+    background-color:darkcyan;
     height: 50px;
     flex-grow: 1;
     display: flex;
@@ -25,7 +27,7 @@
 }
 
 .container>.menuentry:hover {
-    background-color: navy;
+    background-color: darkslategray;
     color: white;
 }
 
