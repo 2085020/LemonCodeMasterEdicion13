@@ -1,0 +1,64 @@
+$primary-color:red;
+$secondary-color:blue;
+$ternary-color:green;
+$text-color:white;
+
+.container-1 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:$text-color;
+}
+
+.base-color {
+    background: $primary-color;
+}
+
+.base-colorb {
+    background: $secondary-color;
+}
+
+.base-colorg {
+    background: $ternary-color;
+}
+
+@mixin color-divs-dark ($endNumber, $classname, $color) {
+    @for $i from 1 through $endNumber {
+        .#{$classname}-#{$i} {
+            background-color: darken($color, $i*8);
+            color: darken($text-color, $i*15);
+        }
+    }
+    
+}
+
+@mixin color-divs-light ($endNumber, $classname, $color) {
+    @for $i from 1 through $endNumber {
+        .#{$classname}-#{$i} {
+            background-color: lighten($color, $i*8);
+            color: darken($text-color, $i*15);
+        }
+    }
+    
+}
+
+@include color-divs-dark(4,"darken" ,$primary-color );
+@include color-divs-light(4,"lighten" ,$primary-color );
+@include color-divs-dark(4,"darkenb" ,$secondary-color );
+@include color-divs-light(4,"lightenb" ,$secondary-color );
+@include color-divs-dark(4,"darkeng" ,$ternary-color );
+@include color-divs-light(4,"lighteng" ,$ternary-color );
