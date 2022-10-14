@@ -1,0 +1,31 @@
+@media screen and (min-width: 431px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+
+.container>.menuentry {
+    background-color: aqua;
+    height: 50px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container>.menuentry:hover {
+    background-color: navy;
+    color: white;
+}
+
