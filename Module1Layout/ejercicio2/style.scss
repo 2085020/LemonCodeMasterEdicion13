@@ -1,0 +1,54 @@
+@use 'basea' as b;
+//@use 'baseb' as b;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container > div {
+    border: 1px solid black;
+    font-family: b.$font-family;
+    width: 150px;
+    height:100px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: b.$radius;
+}
+
+.container > span {
+    font-family: b.$font-family;
+    width: 150px;
+    height:50px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: b.$radius;
+}
+
+.base {
+    background-color: b.$primary-color;
+}
+
+.important {
+    background-color: darken(b.$primary-color, 30);
+}
+
+.warning {
+    background-color: lighten($color: b.$primary-color, $amount: 30);
+}
+
+.font {
+    font-family: b.$font-family !important;
+}
+
+.secondary-font {
+    font-family:  b.$secondary-font !important;
+}
+
+.shadow-box {
+    @include b.shadow-effect();
+}

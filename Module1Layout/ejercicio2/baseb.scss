@@ -1,0 +1,11 @@
+$primary-color: blue;
+$radius:26px;
+$font-family:"Lucida sans";
+$secondary-font:"Times New Roman";
+
+@mixin shadow-effect($shadow: 5px) {
+    box-shadow: -6px 10px $shadow rgba(0,0,0,0.69);
+    &:hover {
+        box-shadow: -3px 5px $shadow rgba(0,0,0,0.69);
+    }
+}
