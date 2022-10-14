@@ -16,6 +16,7 @@
     grid-template-rows: auto auto;
     box-sizing: border-box;
     border-width: 5px 10px 5px 10px;
+    width: 270px;
 }
 
 .card > .cardcontent {
