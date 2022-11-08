@@ -67,20 +67,14 @@ console.log("************ Deep Set *****************");
 function deepSet (value, theObject, ...rest) {
     switch (rest.length) {
         case 0:
-            return theObject;
             break;
         case 1:
-            return {
-                ...theObject,
-                [rest[0]]: value
-            }
+            theObject[rest[0]] = value;
             break;
         default:
             const element = rest.shift();
-            return {
-                ...theObject,
-                [element] : deepSet(value, theObject[element], ...rest )
-            }
+            theObject[element] = theObject[element]??{};
+            deepSet(value, theObject[element]??{}, ...rest );
             break;
 
     };
@@ -89,11 +83,11 @@ function deepSet (value, theObject, ...rest) {
 
 let myObject2 = {};
 
-myObject2 = deepSet(1, myObject2, "a", "b");
+deepSet(1, myObject2, "a", "b");
 console.log(JSON.stringify(myObject2));  // {a: { b: 1}}
-myObject2 = deepSet(2, myObject2, "a", "c");
+deepSet(2, myObject2, "a", "c");
 console.log(JSON.stringify(myObject2));  // {a: { b: 1, c: 2}}
-myObject2 = deepSet(3, myObject2, "a");
+deepSet(3, myObject2, "a");
 console.log(JSON.stringify(myObject2));  // {a: 3}
-myObject2 = deepSet(4, myObject2);
+deepSet(4, myObject2);
 console.log(JSON.stringify(myObject2));  // Do nothing // {a: 3}
