@@ -1,0 +1,31 @@
+{
+  "name": "optional_parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "rimraf dist &&  parcel ./src/index.html",
+    "build:prod": "rimraf dist &&  parcel build ./src/index.html",
+    "start:dev": "rimraf dist && parcel ./src/index.html --open",
+    "start": "run-p -l type-check:watch start:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "bootstrap": "^5.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
