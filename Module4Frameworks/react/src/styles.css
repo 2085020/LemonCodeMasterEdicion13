@@ -1,0 +1,85 @@
+body, html{
+  padding:0px;
+  margin:0px;
+}
+.list-user-list-container {
+  display: grid;
+  grid-template-columns: 80px 1fr 3fr;
+  grid-template-rows: 20px;
+  grid-auto-rows: 80px;
+  grid-gap: 10px 5px;
+}
+
+.list-header {
+  background-color: #2f4858;
+  color: white;
+  font-weight: bold;
+}
+
+.list-user-list-container > img {
+  width: 80px;
+}
+
+.pages {
+  padding: 10px 10px 10px 10px;
+}
+
+.pages > span {
+  padding: 10px 10px 10px 10px;
+}
+
+.pages > span:not(:first-of-type):not(:last-of-type)::before {
+  content: " - ";
+  cursor: pointer;
+  color: blue;
+}
+
+.pages > span:not(:first-of-type):not(:last-of-type) {
+  cursor: pointer;
+  color: blue;
+}
+
+.actualKey {
+  cursor: default !important;
+  color: black !important;
+}
+
+.password {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centrado {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.detalle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: lightgray;
+}
+
+.centerBox {
+  width: 400px;
+}
+.header, .row {
+  display: flex;  /* aligns all child elements (flex items) in a row */
+}
+
+.col {
+  flex: 1;        /* distributes space on the line equally among items */
+}
+
+.col > img {
+  width: 80px;
+}
+
+.link {
+  cursor: pointer;
+}
