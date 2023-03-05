@@ -23,23 +23,23 @@ export const allKitties : PictureInfo[] = [
 
 export const allPuppies : PictureInfo[] = [
     {
-        id:"1",
+        id:"5",
         picUrl:"/assets/images/207.jpg",
-        title:"Kitten 1"
+        title:"Puppie 5"
     },
     {
-        id:"2",
+        id:"6",
         picUrl:"/assets/images/208.jpg",
-        title:"Kitten 2"
+        title:"Puppie 6"
     },
     {
-        id:"3",
+        id:"7",
         picUrl:"/assets/images/209.jpg",
-        title:"Kitten 3"
+        title:"Puppie 7"
     },
     {
-        id:"4",
+        id:"8",
         picUrl:"/assets/images/2010.jpg",
-        title:"Kitten 4"
+        title:"Puppie 8"
     }
 ]

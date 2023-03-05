@@ -1,10 +1,15 @@
 import React from 'react';
 import { allPuppies } from './kitties-data';
+import { MyUserContext } from "./context";
 
 export const PuppiesPage: React.FC = () => {
-    const kittenIds = [7,8,9,10];
-    const handleClickCheckBox = () => {
-
+    const {selectedCats, selectCat} = React.useContext(MyUserContext);
+    const handleClickCheckBox = (event) => {
+        if (selectedCats.indexOf(event.target.value)===-1) {
+            selectCat([...selectedCats, event.target.value]);
+        } else {
+            selectCat(selectedCats.filter(a => a !== event.target.value));
+        }
     }
     return (
         <div className='list-user-list-container'>
@@ -12,7 +17,7 @@ export const PuppiesPage: React.FC = () => {
                 <div key={kittie.id}>
                 <img src={kittie.picUrl} />
                 {kittie.title} <br/>
-                add to cart <input type="checkbox" onChange={handleClickCheckBox} value={kittie.id}></input>
+                add to cart <input type="checkbox" onChange={handleClickCheckBox} value={kittie.id} checked={selectedCats.includes(kittie.id)}></input>
                 </div>
             )}
         </div>

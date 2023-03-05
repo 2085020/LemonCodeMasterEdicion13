@@ -18,7 +18,7 @@ export const KittiesPage: React.FC = () => {
                 <div key={kittie.id}>
                 <img src={`${kittie.picUrl}`}/>
                 {kittie.title} <br/>
-                add to cart <input type="checkbox" onChange={handleClickCheckBox} value={kittie.id}></input>
+                add to cart <input type="checkbox" onChange={handleClickCheckBox} value={kittie.id} checked={selectedCats.includes(kittie.id)}></input>
                 </div>
             )}
         </div>
