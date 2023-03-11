@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logo h1 {
+  width: 200px;
+  margin-top: 60px;
+}
+
+.logo h5 {
+  width: 200px;
+  margin-top: 70px;
+  margin-left: -20px;
+}
+
+.logo h6 {
+  margin-top: 7px;
+  font-size: 15px;
+}
+
+.logo button {
+  background-color: lightcoral;
+  margin-left: 15px;
+}

@@ -1,0 +1,10 @@
+<div *ngIf="isPublic">
+<app-public-header />
+<app-public-menu></app-public-menu>
+</div>
+<div *ngIf="!isPublic">
+  <app-private-header></app-private-header>
+  <app-private-menu></app-private-menu>
+</div>
+<router-outlet></router-outlet>
+<app-footer />
