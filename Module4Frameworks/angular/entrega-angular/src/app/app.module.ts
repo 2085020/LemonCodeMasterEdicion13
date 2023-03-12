@@ -21,7 +21,8 @@ import { ProfileComponent } from './pages/internal/profile/profile.component';
 import { MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button'
+import {MatButtonModule} from '@angular/material/button';
+import { RotateDirective } from './directives/rotate.directive'
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {MatButtonModule} from '@angular/material/button'
     GalleryComponent,
     CrudComponent,
     ProfileComponent,
+    RotateDirective,
   ],
   imports: [
     BrowserModule,

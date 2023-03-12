@@ -1,1 +1,24 @@
-<p>gallery works!</p>
+<div class="mainframe">
+  <img src="{{ galeria[selected].src }}" width={{width}} rotate="0" [step]="10" />
+</div>
+<div class="snapshots">
+  <div class="snapshotsin" *ngIf="sliceIni>0">
+    <button mat-raised-button color="primary" (click)="pagAnterior()">&lt;&lt;</button>
+  </div>
+  <div class="snapshotsin" *ngFor="let image of galeria | slice:sliceIni:sliceFin">
+    <img src="{{ image.src }}" (click)="setImage(image.id)" [ngClass]="{'imgSelected' : image.id === selected}"/>
+  </div>
+  <div class="snapshotsin" *ngIf="sliceFin<galeria.length">
+    <button mat-raised-button color="primary" (click)="pagSiguiente()" rotate="20">&gt;&gt;</button>
+  </div>
+</div>
+<div class="buttons">
+  <ul>
+    <li><button mat-raised-button color="primary" disabled={{!selected}} (click)="anterior()">Anterior</button></li>
+    <li><button mat-raised-button color="primary" [disabled]="(galeria.length-1)===selected"   (click)="siguiente()">Siguiente</button></li>
+    <li><button mat-raised-button color="accent" (click)="augmentar()">Augmentar</button></li>
+    <li><button mat-raised-button (click)="disminuir()">Disminuir</button></li>
+    <li *ngIf="!showStop"><button mat-raised-button (click)="play()" color="warn">Play</button></li>
+    <li *ngIf="showStop"><button mat-raised-button (click)="stop()" color="warn">Stop</button></li>
+  </ul>
+</div>

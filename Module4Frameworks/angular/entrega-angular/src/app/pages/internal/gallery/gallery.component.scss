@@ -1,0 +1,41 @@
+ul {
+  display: flex;
+  padding: 0;
+}
+
+ul li {
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.mainframe img {
+  margin:auto;
+}
+
+.snapshots {
+  display: flex;
+}
+.snapshots img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.mainframe, .buttons {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+.snapshots {
+  margin: auto;
+  width: 300px;
+  display: flex;
+  gap:5px;
+  margin-bottom: 10px;
+}
+
+.imgSelected {
+  border:3px solid red;
+}
